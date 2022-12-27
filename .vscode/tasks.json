@@ -5,9 +5,10 @@
             "label": "C/C++: g++ build active file",
             "command": "/usr/bin/g++",
             "args": [
-				"-I$/usr/include/SDL2",
-                "-g",
+				"-I/usr/include/SDL2",
+                "-g3",
                 "${file}",
+                "${fileDirname}/Screen.cpp",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}",
 				"-lSDL2"
