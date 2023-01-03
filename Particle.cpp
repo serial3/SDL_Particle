@@ -11,7 +11,7 @@ Particle::Particle(): m_x(0), m_y(0) {
 
 void Particle::init() {
 	m_direction = (2 * M_PI * rand())/RAND_MAX;
-	m_speed = (0.004 * rand())/RAND_MAX;
+	m_speed = (0.04 * rand())/RAND_MAX;
 
 	m_speed *= m_speed;
 }
