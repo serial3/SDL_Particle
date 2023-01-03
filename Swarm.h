@@ -13,6 +13,7 @@ private:
 public:
 	Swarm();
 	virtual ~Swarm();
+	void update();
 
 	const Particle *getParticles() {return m_pParticles; };
 };
