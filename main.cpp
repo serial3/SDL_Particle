@@ -29,7 +29,6 @@ int	main(){
 
 	int elapsed = SDL_GetTicks();
 
-	screen.clear();
 	swarm.update(elapsed);
 	
 	unsigned char green = (unsigned char)((1 + sin(elapsed * 0.001)) * 128);
@@ -47,6 +46,8 @@ int	main(){
 		screen.setPixel(x, y, red, green, blue);
 
 	}
+
+	screen.boxBlur();
 
 		//draw the box
 		screen.update();
