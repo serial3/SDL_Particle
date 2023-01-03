@@ -73,7 +73,7 @@ void Screen::boxBlur() {
 					int currentX = x + col;
 					int currentY = y + row;
 
-					if(currentX >= 0 && currentX < SCREEN_WIDTH && currentY >= 0 && currentX < SCREEN_HEIGHT) {
+					if(currentX >= 0 && currentX < SCREEN_WIDTH && currentY >= 0 && currentY < SCREEN_HEIGHT) {
 						Uint32 color = m_buffer2[currentY *SCREEN_WIDTH + currentX];
 
 						Uint8 red = color >> 24;
