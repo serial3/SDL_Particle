@@ -9,6 +9,8 @@
                 "-g3",
                 "${file}",
                 "${fileDirname}/Screen.cpp",
+                "${fileDirname}/Particle.cpp",
+                "${fileDirname}/Swarm.cpp",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}",
 				"-lSDL2"

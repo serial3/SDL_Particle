@@ -21,8 +21,7 @@ bool Screen::init(){
 
 	if(m_window == NULL){
 		SDL_Quit();
-		cout << SDL_GetError() << endl;
-		return 2;
+		return false;
 	}
 
 	m_renderer = SDL_CreateRenderer(m_window, -1, SDL_RENDERER_PRESENTVSYNC);
@@ -34,7 +33,7 @@ bool Screen::init(){
 		cout << "couldn\'t render" << endl;
 		SDL_DestroyWindow(m_window);
 		SDL_Quit();
-		return 3;
+		return false;
 	}
 
 	if(m_texture == NULL) {
@@ -42,16 +41,22 @@ bool Screen::init(){
 		SDL_DestroyRenderer(m_renderer);
 		SDL_DestroyWindow(m_window);
 		SDL_Quit();
-		return 4;
+		return false;
 	}
 
 	m_buffer = new Uint32[SCREEN_WIDTH*SCREEN_HEIGHT];
+
+	memset(m_buffer, 0, SCREEN_WIDTH * SCREEN_HEIGHT * sizeof(Uint32));
 
 	return true;
 }
 
 void Screen::setPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue){
 	Uint32 color = 0;
+
+	if(x < 0 || x >= SCREEN_WIDTH || y < 0 || y >= SCREEN_HEIGHT) {
+		return;
+	}
 
 	color += red;
  	color <<= 8;
@@ -61,7 +66,7 @@ void Screen::setPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue){
 	color <<= 8;
 	color += 0xFF;
 
-	m_buffer[(y * SCREEN_WIDTH)+ x] = color;
+	m_buffer[(y * SCREEN_WIDTH) + x] = color;
 }
 
 void Screen::update(){
@@ -78,6 +83,7 @@ bool Screen::processEvents(){
 			return false;
 		}
 	}
+	return true;
 }
 void Screen::close(){
 		//cleaning stuff
