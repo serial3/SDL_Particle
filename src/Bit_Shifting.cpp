@@ -2,7 +2,7 @@
 #include <iomanip>
 using namespace std;
 
-int main(){
+int Bit_Shifting(){
 
 	unsigned char alpha = 0xFF;
 	unsigned char red = 0x12;

@@ -1,6 +1,6 @@
-#include "Particle.h"
+#include "../include/Particle.h"
 #include <stdlib.h>
-#include "Screen.h"
+#include "../include/Screen.h"
 #include <math.h>
 
 namespace sdlparticle {

@@ -1,8 +1,8 @@
 #include <iostream>
 #include <SDL2/SDL.h>
-#include "Screen.h"
-#include "Particle.h"
-#include "Swarm.h"
+#include "../include/Screen.h"
+#include "../include/Particle.h"
+#include "../include/Swarm.h"
 #include <math.h>
 #include <stdlib.h>
 #include <time.h>
@@ -62,4 +62,4 @@ int	main(){
 
 	screen.close();
 	return 0;
-};
+}

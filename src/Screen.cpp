@@ -1,4 +1,4 @@
-#include "Screen.h"
+#include "../include/Screen.h"
 using namespace std;
 
 namespace sdlparticle {
@@ -141,4 +141,4 @@ void Screen::close(){
 	SDL_Quit();
 }
 
-};
+}

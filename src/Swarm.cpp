@@ -1,4 +1,4 @@
-#include "Swarm.h"
+#include "../include/Swarm.h"
 
 namespace sdlparticle {
 	

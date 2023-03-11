@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int main() {
+int Pixel_Fetcher() {
 	int color = 0x12345678;
 
 	int red = (color & 0xFF000000) >> 24;
