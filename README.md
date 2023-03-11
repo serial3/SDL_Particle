@@ -1,7 +1,7 @@
 # SDL-Particle
 
 Simple project using C++<br>
-It uses the [SDL2][SDL] library to render graphics and uses [CMake][] as a build system.<br>
+It uses the SDL2 library to render graphics and uses CMake as a build system.<br>
 
 ## Dependencies
 
@@ -44,7 +44,7 @@ cmake ..
 make
 
 # Run
-./falling-brick-game
+./SDL-Particle
 ```
 
 ***Note:*** To use SDL2_image, SDL2_ttf, SDL2_net or SDL2_mixer, you should
