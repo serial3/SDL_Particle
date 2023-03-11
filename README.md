@@ -5,11 +5,11 @@ It uses the [SDL2][SDL] library to render graphics and uses [CMake][] as a build
 
 ## Dependencies
 
-- [Git][]
+- Git
 - C Compiler (gcc, ...)
-- [CMake][]
-- [SDL2][SDL] library
-- [SDL2_gfx][] library
+- CMake
+- SDL2 library
+- SDL2_gfx library
 
 **On Debian/Ubuntu based distributions, use the following command:**
 
@@ -19,10 +19,10 @@ sudo apt install git build-essential pkg-config cmake cmake-data libsdl2-dev lib
 
 **Optional packages:**
 
-- [SDL2_image][] library
-- [SDL2_ttf][] library
-- [SDL2_net][] library
-- [SDL2_mixer][] library
+- SDL2_image library
+- SDL2_ttf library
+- SDL2_net library
+- SDL2_mixer library
 
 ```sh
 sudo apt install libsdl2-image-dev libsdl2-ttf-dev libsdl2-net-dev libsdl2-mixer-dev
